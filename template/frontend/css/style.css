@@ -1,0 +1,584 @@
+.margin-btn-project{
+    margin-bottom: 1vw;
+    margin-top: 1vw;
+}
+.KNOW-MORE-about{
+    margin-left: 1.5vw;
+}
+.footer-header1{
+    color: #fff;
+    font-size: 1vw;
+    margin-right: 1vw;
+}
+.customer-home{
+    margin-bottom: 60px;
+    font-size: 13px;
+    padding-left: 7vw;
+    padding-right: 7vw;
+}
+.news-lester{
+    color:#1b1e20; 
+    font-size: 30px; 
+    
+}
+.news-deatil{
+    color:#1b1e20;
+    font-size: 1vw;
+    padding-left: 20px;
+    padding-top:20px; 
+    color:#8f8f8f
+}
+.no-padding{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+body {
+    font-family: 'Kanit', sans-serif;
+    color: #000;
+    font-size: 10px;
+    min-height: 100vh;
+} 
+
+footer {
+    background-color: #343434;
+    color: #fff;
+    padding: 1% 8% 1rem 8%;
+}
+
+.hoverable {
+    -webkit-transition: -webkit-box-shadow .25s;
+    transition: -webkit-box-shadow .25s;
+    transition: box-shadow .25s;
+    transition: box-shadow .25s, -webkit-box-shadow .25s;
+    z-index: 1000;
+}
+
+.hoverable:hover {
+    -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form-control {
+    height: calc(2.25em + 2px);
+    padding: .375em .75em;
+    font-size: 1em;
+}
+.footer-panel {
+    padding: 1% 5% 0 5%;
+}
+
+.footer-header {
+    border-bottom: solid 0.3em #fec619;
+    padding: 5% 0;
+}
+.btn-sm {
+    padding: 0.25em 0.95em;
+}
+.btn-lg {
+    color: #fff;
+    background-color: #448ccb;
+    font-size: 1.2vw;
+    padding-left: 24px;
+    margin-bottom: 3vw;
+    margin-top: 2vw;
+}
+.btn-show{
+    color: #fff;
+    background-color: #458ccc;
+    font-size: 1em;
+}
+.btn-showhome{
+    color: #fff;
+    background-color: #282828;
+    font-size: 1em;
+    margin-bottom: 1vw;
+}
+
+.btn.facebook {
+    background-color: #4867aa;
+    border: solid 2px #fff;
+    font-weight: bold;
+    font-size: 1.25em;
+    padding: 0.2em 1.25em;
+    height: unset;
+}
+
+.btn.google {
+    background-color: #e04a32;
+    border: solid 2px #fff;
+    font-weight: bold;
+    font-size: 1.25em;
+    padding: 0.2em 1.25em;
+    height: unset;
+}
+
+.btn-yellow {
+    background-color: #fec619;
+}
+
+.btn-black {
+    background-color: #000;
+    color: #fff;
+    border-radius: unset;
+    border-bottom: solid 2px #448ccb;
+    font-size: 1.2vw;
+    margin-top: 1vw;
+}
+
+.navbar {
+    padding: 0px 15vw;
+}
+
+.header .header-panel {
+    font-size: 1vw;
+    color: #fff;
+    background-color: #448ccb;
+    padding: 1em;
+}
+
+.img-icon {
+    height: 75px;
+}
+
+.layout-menu .nav-item .nav-link {
+    color: #000;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+/* article */
+
+.absolute-article {
+    position: absolute;
+    top: 180px;
+    left: 5px;
+    width: 60px;
+    height: 70px;
+    background-color: #ffd900;
+}
+
+/* menu */
+
+.icon-top {
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    line-height: 1.5em;
+}
+.text-center{
+    text-align: center;
+}
+.nav {
+    flex-wrap: unset;
+}
+
+.nav-item {
+    padding: 0 1em;
+}
+.readmore{
+    border: 3px solid rgb(255, 255, 255);
+    color: #fff;
+    background-color: transparent;
+    padding: 5px;
+    font-size: 15px;
+}
+.nav-item.active {
+    border-bottom: 3px solid rgb(68, 140, 203);
+}
+
+.nav-link {
+    padding: .25rem 1rem;
+}
+
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active {
+    color: #000;
+}
+
+.margin-text {
+    margin-bottom: 10px;
+}
+
+.text-header {
+    font-weight: bold;
+}
+.text-sm {
+    font-size: 1.5em;
+}
+
+.text-md {
+    font-size: 2.5em;
+}
+
+.text-lg {
+    font-size: 4vw;
+    color: #484848;;
+    padding-top: 90px;
+    padding-bottom: 25px;
+}
+
+.text-xl {
+    font-size: 4em;
+}
+
+.text-content-dot {
+    width: 100%;
+    height: 100%;
+}
+
+.row {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.nav-link {
+    padding-right: .25rem !important;
+    padding-left: .25rem !important;
+}
+
+/* Fixes dropdown menus placed on the right side */
+
+.ml-auto .dropdown-menu {
+    left: auto !important;
+    right: 0px;
+}
+
+.navbar-nav>li>.icon {
+    padding-right: 24px;
+    display: inline-block;
+}
+
+.lng-icon {
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    width: 2em;
+    line-height: 2em;
+    cursor: pointer;
+}
+
+.active-lng .lng-icon {
+    color: #000;
+    background: #fff;
+    border-radius: 50%;
+    margin-left: 0.3vw;
+}
+
+a {
+    color: #000000;
+}
+
+a:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+.right {
+    float: right;
+}
+
+.arrow {
+    line-height: 0;
+    position: absolute;
+    display: block;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.slick-slide {
+    transition: all ease-in-out .3s;
+    margin: 0px 0.225%;
+    opacity: 1;
+}
+
+.slick-track {
+    padding: 10px 0px;
+}
+
+.slick-active {
+    opacity: 1;
+}
+
+.slick-current {
+    opacity: 1;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-fill {
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+}
+
+.img-cover {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.service-header{
+    margin-bottom: 10px;
+    font-size: 1.6vw;
+    color: #fff;
+    font-weight: 800;
+}
+
+@media only screen and (max-width: 1600px) {
+    .navbar-nav>li>.icon {
+        padding-right: 16px;
+    }
+    .absolute-article {
+        width: 55px;
+        height: 60px;
+    }
+
+}
+
+@media only screen and (max-width: 1366px) {
+    .navbar{
+        padding: 0px 7vw;
+    }
+    .img-icon {
+        height: 80px;
+    }
+    .service-header{
+    font-size: 2vw;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .about-welcomeseem2 {
+        font-size: 1.3vw;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .img-icon {
+        height: 64px;
+    }
+    .navbar{
+        padding: 0px 5vw;
+    }
+    .navbar-nav>li>.icon {
+        padding-right: 12px;
+    }
+    .news-deatil{
+        font-size: 1.8vw;
+    }
+    .text-lg {
+        font-size: 4em;
+        color: #484848;
+        padding-top: 70px;
+        padding-bottom: 25px
+    }
+    .service-header {
+        font-size: 3vw;
+    }
+    .btn-black {
+        margin-top: 2vw;
+        font-size: 2.2vw;
+    }
+    .news-deatil{
+        padding-left: 0px
+    }
+    .footer-header1 {
+        padding-right: 0vw;
+    }
+    .KNOW-MORE-about {
+        margin-left: 0vw;
+    }
+    .about-welcomeseem2 {
+        font-size: 1.5vw;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .navbar-light .navbar-nav .active>.nav-link,
+    .navbar-light .navbar-nav .nav-link.active {
+        color: #41403f;
+    }
+    .ml-auto {
+        text-align: center;
+    }
+    .header .header-detail {
+        display: none;
+    }
+    .layout-menu {
+        font-size: 1.2vw;
+    }
+    .text-lg {
+        padding-top: 40px;
+    }
+    .KNOW-MORE-about{
+        margin-left: 0vw;
+    }
+}
+
+@media only screen and (max-width: 991.5px) {
+    .layout-menu {
+        font-size: 16px;
+    }  
+    .service-header{
+    font-size: 2.8vw;
+    }
+    .btn-lg {
+        font-size: 2vw;
+    }
+    .footer-header1 {
+        padding-right: 1vw;
+    }
+    .active-lng .lng-icon {
+        margin-left: 55.9vw;
+    }
+}
+@media only screen and (max-width: 970.5px) {
+    .active-lng .lng-icon {
+        margin-left: 54.9vw;
+    }
+}
+@media only screen and (max-width: 936.5px) {
+    .active-lng .lng-icon {
+        margin-left: 50.9vw;
+    }
+}
+@media only screen and (max-width: 863.5px) {
+    .active-lng .lng-icon {
+        margin-left: 45.9vw;
+    }
+}
+@media only screen and (max-width: 778.5px) {
+    .active-lng .lng-icon {
+        margin-left: 38.9vw;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .active-lng .lng-icon {
+        margin-left: 25vw;
+    }
+    .btn-lg {
+        font-size: 2.5vw;
+    }
+    .readmore {
+        font-size: 18px;
+    }
+    .news-deatil {
+        font-size: 3vw;
+    }
+    
+}
+
+@media only screen and (max-width: 720px) {
+    .header {
+        padding: 0;
+    }
+    .absolute-article {
+        width: 50px;
+        height: 55px;
+    }
+    .layout-menu {
+        font-size: 14px;
+    }
+    .service-header{
+    font-size: 4vw;
+    }
+    .btn-lg {
+        font-size: 1em;
+    }
+    .about-welcomeseem2 {
+        font-size: 1.9vw;
+    }
+    
+    
+}
+@media only screen and (max-width: 580px) {
+    .active-lng .lng-icon {
+        margin-left: 10vw;
+    }
+    
+}
+
+@media only screen and (max-width: 576px) {
+    .icon-top {
+        display: none;
+    }
+    footer {
+        padding: 2%;
+    }
+    .service-header {
+        font-size: 4vw;
+        font-weight: 600;
+        padding-top: 5vw;
+    }
+    .news-deatil{
+            font-size: 4.5vw;
+    }
+}
+@media only screen and (max-width: 458.5px) {
+    .active-lng .lng-icon {
+        margin-left: 6vw;
+    }
+    .about-welcomeseem2 {
+        font-size: 2.2vw;
+    }
+}
+@media only screen and (max-width: 415.5px) {
+    .footer-header1 {
+        padding-right: 0vw;
+    }
+    .active-lng .lng-icon {
+        margin-left: 0vw;
+    }
+    .about-welcomeseem2 {
+        font-size: 2.8vw;
+    }
+}
+
+@media only screen and (max-width: 375.5px) {
+    .btn-black {
+        margin-top: 3vw;
+        font-size: 3vw;
+    }
+    .service-header {
+        font-size: 7vw;
+    }
+    .footer-header1 {
+        padding-right: 56vw;
+    }
+    .active-lng .lng-icon {
+        margin-left: 60vw;
+    }
+}
+
+
+@media only screen and (max-width: 350px) {
+    .img-icon {
+        height: 48px;
+    }
+    .service-header{
+    font-size: 8vw;
+    }
+    .text-lg {
+        font-size: 2em;
+    }.footer-header1 {
+        padding-right: 52vw;
+    }
+}
+@media only screen and (max-width: 325px) {
+    .footer-header1 {
+        padding-right: 25vw;
+    }
+    .active-lng .lng-icon {
+        margin-left: 50vw;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .footer-header1 {
+        padding-right: 48vw;
+    }
+}
+
+

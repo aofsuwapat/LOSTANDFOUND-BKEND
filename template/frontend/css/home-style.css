@@ -1,0 +1,774 @@
+.cut-text-multi-header-slide{
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.cut-text-multi-about-home{
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.cut-text-multi-text-detail-why{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.cut-text-multi-slide-service-detail-home{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.cut-text-multi-news-deatil{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.cut-text-multi-topic-news-home{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.cut-text-multi-about-home p{
+    margin-bottom: 0rem !important; 
+}
+.botton-slide{
+    padding-left: 24px;
+}
+.our-project{
+    font-size: 4vw;
+    color: #fff;
+    padding-top: 90px;
+    padding-bottom: 25px;
+}
+.READ-MORE-LATEST-NEWS{
+    padding-left:20px;
+    padding-top:20px;  
+}
+.LATEST-NEWS{
+    color:#1b1e20;
+    font-size: 2.7vw;
+    padding-left: 20px;
+}
+.SEEm{
+    color:#1b1e20;
+    font-size: 5vw;
+}
+.Engineers-Consultent{
+    color:#1b1e20;
+    font-size: 2vw;
+}
+.topic-news-home{
+    padding-top: 20px;
+    font-size: 1.3vw;
+}
+.detail-news-home{
+    padding-top: 5px;
+    color:#8f8f8f;
+    font-size: 1vw;
+}
+.service-detail{
+    position: absolute ;
+    top: 30%;
+    background-color: rgba(14, 41, 86, 0.83);
+    max-width: 60%;
+    max-height: 65%;
+    padding-top: 7vw;
+    padding-right: 5vw;
+    padding-left: 5vw;
+}
+.text-detail-why{
+    color: #8b8d8f;
+    font-size: 1vw;
+}
+.text-topic-why{
+    padding-top: 10px;
+    font-size: 1.3vw;
+}
+.text-about{
+    padding: 24px;
+    padding-top: 1px;
+    color: #807c7c;
+    font-size: 1.3vw;
+}
+.slide-service-detail-home{
+    color: #fff;
+    font-size: 1.2vw;
+}
+.slide-header-about-home{
+    font-size: 2.4vw;
+    color:#448ccb;
+}
+.weare-about-home{
+    color:#fff;
+    background-color:#448ccb;
+    font-size: 1.5vw;
+}
+.customer-home {
+    margin-bottom: 60px;
+    font-size: 1.5vw;
+    padding-left: 7vw;
+    padding-right: 7vw;
+}
+.slide-header{
+    color: #448ccb;
+    font-size: 2vw;
+    padding-left: 1.5vw;
+}
+.slide-text-detail{
+    padding-top: 1px;
+    color: #545454;
+    font-size: 1.3vw;
+}
+.slide-text-detail2{
+    padding-top: 1px;
+    color: #545454;
+    font-size: 1.3vw;
+}
+.slide-header-home{
+    font-size: 2.1vw;
+    padding-bottom: 20px;
+    color: #545454;
+    font-weight: 600;
+}
+.about-section{
+    padding: 0px 15vw;
+}
+.img-about-home{
+    width: 12vw;
+    height: 12vw;
+    object-fit: cover;
+    margin-bottom: 1%;
+}
+.about-home{
+    padding-left: 10vw;
+    padding-top: 6vw;
+}
+.project-box{
+    background:linear-gradient(0deg,rgba(19,46,91,0.6),rgba(19,46,91,0.6)),url(../../../img_upload/project_img/10.jpg);
+
+}
+.text-project{
+    margin-bottom:60px;
+    padding-left: 10vw; 
+    padding-right: 10vw;
+    font-size: 1.2vw; 
+    color: #fff;
+}
+.slick-slide {
+    margin: unset;
+    width: 100%;
+
+}
+
+.slide-item{
+    position: relative;
+}
+.slide-detail-home{
+    position: absolute ;
+    top: 30%;
+    background-color: rgba(255, 255, 255, 0.65);
+    padding: 24px 12.5VW;
+    max-width: 60%;
+    max-height: 65%;
+}
+/*isotope*/
+/* ---- isotope ---- */
+
+.grid {
+ 
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  /* display: inline-block; */
+  clear: both;
+}
+
+/* ---- .element-item ---- */
+
+.element-item {
+  padding: 10px;
+  color: #262524;
+  margin-bottom: 30px;
+}
+.mgbot-15{
+    margin-bottom: 15px;
+}
+.supply{
+    padding-left: 0px; 
+    
+}
+/*end isotope*/
+.img-supply{
+    width: 230px;
+     height: 240px; 
+     padding-top: 10px;
+}
+.img-supply2{
+    width: 230px;
+    height: 240px;
+    padding-left: 10px;
+    padding-top: 40px;
+}
+.footer{
+    border-left: 3px solid; border-color: #36638e;
+    word-break: break-all;
+}
+.img-news{
+    width: 20vw;
+    height: 15vw;
+}
+.text-header-medium{
+    -webkit-text-fill-color: rgba(255, 255, 255, 1); 
+   -webkit-opacity: 1; 
+   color: rgba(255, 255, 255, 1);  
+    font-size:30px;
+}
+.footer-number{
+    color: #909095;
+     font-size:1vw; 
+}
+.footer-address{
+    color: #fff;
+     font-size:1vw; 
+}
+.footer-email{
+    color: #fff;
+     font-size:1vw; 
+}
+.footer-work{
+    color:#909095; 
+    font-size:1vw;
+
+}
+.icon-footer{
+    font-size:1em;
+}
+
+
+
+@media only screen and (max-width: 1504px) {
+    .img-news{
+        width: 20vw;
+        height: 15vw;
+    }
+}
+@media only screen and (max-width: 1366px) {
+    .about-section{
+        padding: 0px 10vw;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .img-news{
+        width: 20vw;
+        height: 15vw;
+    }
+    .slide-service-detail-home {
+        font-size: 2vw;
+    }
+    .slide-header-home {
+        font-size: 3.2vw;
+        padding-left: 0px;
+        padding-bottom: 0px;
+    }
+    .slide-text-detail {
+        font-size: 2vw;
+        padding: 0px;
+        padding-top: 1px;
+    }
+    .slide-detail-home {
+        padding: 24px 6VW;
+    }
+    .slide-header{
+        padding-left: 2.5vw;
+    }
+    .customer-home {
+        font-size: 2.5vw;  
+    }
+    .text-project{
+        font-size: 2.2vw; 
+    }
+    .slide-header{
+        font-size: 2.5vw;
+    }
+    .weare-about-home{
+        color:#fff;
+        background-color:#448ccb;
+        font-size: 2.5vw;
+    }
+    .service-detail{
+        padding-top: 6vw;
+        padding-right: 2vw;
+        padding-left: 2vw;
+    }
+    .topic-news-home{
+        font-size: 2vw;
+    }
+    .detail-news-home{
+        font-size: 1.8vw;
+    }
+    .slide-service-detail-home{
+        font-size: 1.5vw;
+    }
+    .about-home{
+        padding-left: 4vw;
+        padding-top: 8vw;  
+    }
+    .Engineers-Consultent{
+         font-size: 2.8vw;
+    }
+    .text-detail-why{
+        font-size: 1.8vw;
+    }
+    .text-about{
+        font-size: 1.6vw;
+    }
+    .text-topic-why{
+        font-size: 1.9vw;
+    }
+    .slide-header-about-home{
+        font-size: 3.3vw;
+        font-weight: 600;
+    }
+    .LATEST-NEWS{
+        padding-left: 0px;
+        font-size: 29px;
+    }
+    .READ-MORE-LATEST-NEWS{
+        padding-left:0px;
+    }
+    .botton-slide{
+        padding-left: 0px;
+        margin-top: 0vw;
+    }
+    .slide-text-detail2 {
+        font-size: 1.8vw;
+    }
+    .SEEm {
+        font-size: 6vw;
+    }
+    .slide-detail-home {
+        top: 15%;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .slide-detail-home {
+        top: 10%;
+        padding: 24px 4.5VW;
+        max-width: 80%;
+        max-height: 80%;
+    }
+    .img-about-home{
+        width: 15vw;
+        height: 15vw;
+    }
+    .about-home{
+        padding-top: 20vw;
+    }
+    .img-news{
+        width: 30vw;
+        height: 20vw;
+    }
+    .img-news1{
+        padding-left: 35vw;
+    }
+
+    .footer-number{
+        color: #909095;
+         font-size:20px; 
+    }
+    .service-detail {
+        max-width: 80%;
+        max-height: 90%;
+    }
+    .text-topic-why {
+        font-size: 1.8vw;
+    }
+    .text-detail-why {
+        font-size: 1.4vw;
+    }
+    .our-project{
+        padding-top: 30px;;
+    }
+    .text-project {
+        margin-bottom: 50px;
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+    .LATEST-NEWS {
+        font-size: 4vw;
+    }
+    .slide-header-about-home {
+        font-size: 3.7vw;
+    }
+    .slide-text-detail {
+        padding: 0px;
+        font-size: 17px;
+    }
+    .slide-header-home {
+        font-size: 4.1vw;
+        padding-left: 0px;
+    }
+    .slide-service-detail-home {
+        font-size: 1.8vw;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .text-project{
+        margin-bottom:20px;
+        padding-left: 0px; 
+        padding-right: 0px;
+        font-size: 2.8vw; 
+        color: #fff;
+    }
+    .LATEST-NEWS {
+        font-size: 6vw;
+    }
+    .img-news {
+        width: 45vw;
+        height: 30vw;
+    }
+    .img-news1 {
+        padding-left: 25vw;
+        padding-top: 5vw;
+    }
+    .topic-news-home {
+        font-size: 3.8vw;
+    }
+    .detail-news-home {
+        font-size: 2.5vw;
+    }
+    .text-header-medium{
+        font-size:3vw;
+    }
+    .slide-text-detail2 {
+        font-size: 3vw;
+    }
+    .slide-header-about-home {
+        font-size: 5.7vw;
+    }
+    .text-about {
+        font-size: 2.2vw;
+    }
+    .text-detail-why {
+        font-size: 2vw;
+    }
+    .text-topic-why {
+        font-size: 2.5vw;
+    }
+    .about-home {
+        padding-top: 25vw;
+    }
+    .weare-about-home {
+        font-size: 4vw;
+    }
+    .SEEm {
+        font-size: 10vw;
+    }
+    .Engineers-Consultent {
+        font-size: 4.3vw;
+    }
+    .btn-black {
+        margin-top: 3vw;
+        font-size: 3vw;
+    }
+    .service-header {
+        font-size: 3.8vw;
+    }
+    .slide-service-detail-home {
+        font-size: 2.5vw;
+    }
+    .customer-home {
+        font-size: 2.8vw;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .text-header-medium{
+        color:#fff; 
+        font-size:2.5vw;
+    }
+    .footer-number{
+        color: #909095;
+         font-size:2vw; 
+    }
+    .footer-address{
+        color: #fff;
+         font-size:1.5vw; 
+    }
+    .footer-email{
+        color: #fff;
+         font-size:1.5vw; 
+    }
+    .slide-header-home {
+        font-size: 4.3vw;
+        padding-left: 0px;
+        padding-bottom: 0px;
+    }
+    .slide-header-about-home {
+        font-size: 4.7vw;
+    }
+    .customer-home {
+        font-size: 2.8vw;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .about-home{
+        padding-left: 20vw;
+        margin-bottom: 2vw;
+        padding-top: 8vw;
+    }
+    .slide-header-home{
+        top: 10%;
+        max-height: 90%;
+    }
+    .img-about-home{
+        width: 30vw;
+        height: 30vw;
+    }
+    .img-news{
+    width: 40vw;
+    height: 25vw;
+    }
+    .footer-work{
+        color:#909095; 
+       
+    }
+    .slide-item{
+        position: relative;
+        height: 200px;
+    }
+    .slide-service-detail-home {
+        font-size: 2.8vw;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .botton-slide{
+        padding-left: 0px !important;
+        text-align: center;
+        font-size: 2vw;
+        margin-top: 0vw;
+    }
+    .slide-header-home{
+        font-size: 4.5vw !important;
+        padding-bottom: 1px !important;
+    }
+    .slide-item{
+        position: relative;
+    height: 300px;
+    }
+    .slide-text-detail {
+        font-size: 16px;
+        margin-bottom: 1vw;
+    }
+    .text-about {
+        font-size: 2vw;
+    }
+    .text-topic-why {
+        font-size: 2.8vw;
+    }
+    .text-detail-why {
+        font-size: 2.4vw;
+    }
+    
+}
+@media only screen and (max-width: 500px) {
+    .slide-text-detail{
+        font-size: 3vw;
+    }
+    .slide-header-about-home{
+        font-size: 5.3vw;
+    }
+    .text-about{
+        font-size: 3vw;
+    }
+    .text-detail-why{
+        font-size: 3vw;
+    }
+    .text-topic-why{
+        font-size: 5.2vw;
+    }
+    .customer-home {
+        font-size: 3.8vw;  
+    }
+    .topic-news-home{
+        font-size: 3.3vw;
+    }
+    .detail-news-home{
+        font-size: 3vw;
+    }
+}
+@media only screen and (max-width: 415px) {
+    .weare-about-home {
+        font-size: 4vw;
+    }
+    .Engineers-Consultent {
+        font-size: 5.3vw;
+    }
+    .btn-black {
+        font-size: 3vw;
+    }
+    .text-about {
+        font-size: 5vw;
+    }
+    .slide-text-detail2 {
+        font-size: 4.3vw;
+    }
+    .slide-text-detail {
+        font-size: 4vw;
+    }
+    .slide-header-about-home {
+        font-size: 6.3vw;
+    }
+    .text-detail-why {
+        font-size: 5vw;
+    }
+    .img-about-why {
+        width: 19.5vw;
+        height: 16.5vw;
+    }
+    .service-header {
+        font-size: 7vw;
+        padding-top: 13vw;
+    }
+    .slide-service-detail-home {
+        font-size: 4.8vw;
+    }
+    .text-project {
+        font-size: 16px;
+    }
+    .LATEST-NEWS {
+        font-size: 9vw;
+    }
+    .news-deatil {
+        font-size: 5.5vw;
+    }
+    .img-news {
+        width: 50vw;
+        height: 40vw;
+    }
+    .img-news1 {
+        padding-left: 22vw;
+        padding-top: 10vw;
+    }
+    .topic-news-home {
+        font-size: 5.3vw;
+    }
+    .detail-news-home {
+        font-size: 5vw;
+    }
+}
+@media only screen and (max-width: 375.5px) {
+    .slide-text-detail{
+        font-size: 3.5vw;
+    }
+    .slide-text-detail2 {
+        font-size: 4.3vw;
+    }
+    .botton-slide{
+        padding-left: 0px !important;
+        text-align: center;
+        font-size: 0.4rem;
+    }
+    .slide-header-home{
+        font-size: 4vw  !important;
+        padding-bottom: 1px !important;
+    }
+    .img-about-home{
+        width: 30vw;
+        height: 30vw;
+    }
+    .footer{
+        border-left: 3px solid; border-color: #36638e;
+        font-size: 16px;   
+    }
+    .img-news1{
+        padding-left: 20vw;
+        padding-top: 7vw;
+    }
+    .footer-work{
+        color:#909095; 
+        font-size: 1vw;
+    }
+    .icon-footer{
+        font-size:0.5em;
+    }
+    .slide-header-about-home{
+        font-size: 8.3vw !important;
+    }
+    .service-header{
+        padding-top: 25vw;
+    }
+        .slide-service-detail-home{
+            font-size: 4.2vw;
+    }
+        .text-lg {
+            font-size: 3em;
+    }
+    .customer-home {
+        font-size: 3.4vw;
+    }
+    .news-deatil{
+        font-size: 4.5vw;
+    }
+    .topic-news-home{
+        font-size: 4.3vw;
+    }
+    .detail-news-home{
+        font-size: 5vw;
+    }
+    .Engineers-Consultent {
+        font-size: 4.3vw;
+    }
+    .weare-about-home {
+        font-size: 4vw;
+    }
+    .text-detail-why {
+        font-size: 4vw;
+    }
+    .text-about {
+        font-size: 4vw;
+    }
+    .LATEST-NEWS{
+        font-size: 8vw;
+    }
+    .img-news {
+        width: 50vw;
+        height: 40vw;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .slide-header-home {
+        font-size: 5vw !important;
+        padding-bottom: 1px !important;
+    }
+    .btn-lg {
+        font-size: 3vw;
+    }
+    .customer-home {
+        font-size: 4.4vw;
+    }
+    .LATEST-NEWS {
+        font-size: 8vw;
+    }
+    .news-deatil {
+        font-size: 4.5vw;
+    }
+    .img-news {
+        width: 55vw;
+        height: 40vw;
+    }
+    .topic-news-home {
+        font-size: 4.3vw;
+    }
+    .detail-news-home {
+        font-size: 4vw;
+    }
+}

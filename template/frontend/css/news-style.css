@@ -1,0 +1,126 @@
+.cut-text-multi-text-news{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.slick-slide {
+    margin: unset;
+}
+
+.slide-item-news{
+    position: relative;
+}
+.slide-about-news{
+    position: absolute ;
+    background-color: #00000087;
+    height: 100%;
+    width: 100%;
+    padding-left: 210px;
+}
+.slide-headernews{
+    font-size: 60px;
+    color: #fff;
+     padding-top: 70px;
+}
+.img-news{
+        width: 20vw;
+        height: 15vw;
+        margin-top: 4vw;
+}
+.img-newsdetail{
+    width: 100%;
+    height: 100%;
+}
+.news-detail{
+    padding-top: 10px; 
+}
+.news-detail1{
+    font-size: 1vw;
+}
+.news-topic{
+    font-size: 2vw;
+    padding-top: 2vw;
+    padding-bottom: 1vw;
+}
+@media only screen and (max-width: 1024px) {
+    .news-detail1{
+        font-size: 1.5vw;
+    }
+    .news-topic{
+        font-size: 3vw;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .slide-headernews{
+        font-size: 8.5vw !important;
+    }
+    .slide-about-news{
+        padding-left: 15vw !important;
+    }
+    .img-newsdetail{
+        width: 90%;
+        height: 60%;
+        margin-left: 5vw;
+    }
+    .news-detail{
+        padding-right: 5vw; 
+        padding-left: 5vw;
+        margin-bottom: 5vw;
+    }
+    .img-news{
+        width: 45vw;
+        height: 25vw;
+    }
+    .news-detail1{
+        font-size: 1.5vw;
+    }
+}
+@media only screen and (max-width: 574px) {
+    .img-news{
+        width: 90vw;
+        height: 50vw;
+    }
+    .news-topic{
+        font-size: 3vw;
+    }
+    .slide-headernews{
+        font-size: 10vw !important;
+    }
+}
+@media only screen and (max-width: 376px) {
+    .img-news{
+        width: 85vw;
+        height: 50vw;
+    }
+    .news-topic{
+        font-size: 4vw;
+    }
+    .news-detail1{
+        font-size: 1.5vw;
+    }
+    .slide-headernews{
+        font-size: 13vw !important;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .img-newsdetail{
+        width: 90%;
+        height: 60%;
+        margin-left: 5vw;
+    }
+    .news-detail1{
+        font-size: 1vw;
+    }
+    .img-news{
+        width: 80vw;
+        height: 50vw;
+    }
+    .news-topic{
+        font-size: 4.5vw;
+    }
+    .slide-headernews {
+        font-size: 60px;
+        padding-top: 25px;
+    }
+}

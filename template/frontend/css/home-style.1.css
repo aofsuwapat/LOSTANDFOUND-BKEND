@@ -1,0 +1,88 @@
+.about-section{
+    padding: 0px 15vw;
+}
+.img-about-home{
+    width: 12vw;
+    height: 12vw;
+    object-fit: cover;
+    margin-bottom: 1%;
+}
+.about-home{
+    padding-left: 20vw;
+    padding-top: 3vw;   
+}
+/*isotope*/
+/* ---- isotope ---- */
+
+.grid {
+  border: 1px solid #333;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  /* display: inline-block; */
+  clear: both;
+}
+
+/* ---- .element-item ---- */
+
+.element-item {
+ 
+  /* float: left; */
+  /* width: 100px;
+  height: 100px; */
+  margin: 5px;
+  padding: 10px;
+  /* background: #888; */
+  color: #262524;
+}
+.supply{
+    padding-left: 0px; margin-bottom: 70px;
+}
+.img-supply{
+    width: 230px;
+     height: 240px; 
+     padding-top: 10px;
+}
+.img-supply2{
+    width: 230px;
+    height: 240px;
+    padding-left: 10px;
+    padding-top: 40px;
+}
+/*end isotope*/
+@media only screen and (max-width: 1366px) {
+    .about-section{
+        padding: 0px 10vw;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .img-about-home{
+        width: 15vw;
+        height: 15vw;
+    }
+    .about-home{
+        padding-top: 15vw;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .about-home{
+        padding-left: 20vw;
+        margin-bottom: 2vw;
+        padding-top: 8vw;
+    }
+    .img-about-home{
+        width: 30vw;
+        height: 30vw;
+    }
+}
+@media only screen and (max-width: 350px) {
+    .img-about-home{
+        width: 30vw;
+        height: 30vw;
+    }
+}
+
+
+
