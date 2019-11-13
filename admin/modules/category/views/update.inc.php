@@ -3,6 +3,7 @@
    function check(){
     var category_name = document.getElementById("category_name").value;
 
+		category_id = $.trim(category_id);
     category_name = $.trim(category_name);
 
     if(type_name_th.length == 0){
@@ -18,15 +19,15 @@
    }
  }
 
- function readURL(input) {
+ function readURL(input, name) {
 		if (input.files && input.files[0]) {
 			var reader = new FileReader();
 			reader.onload = function(e) {
-				$('#img_back').attr('src', e.target.result);
+				$('#'+name).attr('src', e.target.result);
 			}
 			reader.readAsDataURL(input.files[0]);
 		}else{
-			$('#img_back').attr('src', '../img_upload/category/default.png');
+			$('#'+name).attr('src', '../img_upload/category/default.png');
 		}
 	}
 </script>
@@ -36,7 +37,9 @@
 </div>
 <form role="form" method="post" onsubmit="return check();" action="index.php?content=category&action=edit" enctype="multipart/form-data">
 <input type="hidden" name="category_id" value="<?php echo $_GET['id']?>">
-  
+<input type="hidden" name="category_img" value="<?php echo $category['category_img']?>">
+<input type="hidden" name="found_pin" value="<?php echo $category['found_pin']?>">
+<input type="hidden" name="lost_pin" value="<?php echo $category['lost_pin']?>">
   <div class="row">
     <div class="col-lg-3">
       <div class="form-group">
@@ -52,7 +55,32 @@
 				<label>รูปภาพหมวดหมู่<font color="#F00"></font></label>
 				<div>
 					<img id="img_back" src="../img_upload/category/<?php echo $category['category_img']?> " class="img-responsive img-size"  style = "height: 300px; width: 500px;"> 
-					<input accept=".jpg , .png" type="file" id="category_img" name="category_img" class="form-control" style="margin: 14px 0 0 0 ; width: 300px;" onChange="readURL(this);">
+					<input accept=".jpg , .png" type="file" id="category_img" name="category_img" class="form-control" style="margin: 14px 0 0 0 ; width: 300px;" onChange="readURL(this,'img_back');">
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+  <div class="row">
+		<div class="col-lg-6">
+			<div class="form-group">
+				<label>ไอคอนเจอของ<font color="#F00"></font></label>
+				<div>
+					<img id="img_found_pin" src="../img_upload/category/<?php echo $category['found_pin']?> " class="img-responsive img-size"  style = "height: 300px; width: 500px;"> 
+					<input accept=".jpg , .png" type="file" id="found_pin" name="found_pin" class="form-control" style="margin: 14px 0 0 0 ; width: 300px;" onChange="readURL(this,'img_found_pin');">
+				</div>
+			</div>
+		</div>
+	</div>
+
+  <div class="row">
+		<div class="col-lg-6">
+			<div class="form-group">
+				<label>ไอคอนของหาย<font color="#F00"></font></label>
+				<div>
+					<img id="img_lost_pin" src="../img_upload/category/<?php echo $category['lost_pin']?> " class="img-responsive img-size"  style = "height: 300px; width: 500px;"> 
+					<input accept=".jpg , .png" type="file" id="lost_pin" name="lost_pin" class="form-control" style="margin: 14px 0 0 0 ; width: 300px;" onChange="readURL(this,'img_lost_pin');">
 				</div>
 			</div>
 		</div>

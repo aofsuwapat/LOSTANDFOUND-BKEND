@@ -68,7 +68,6 @@ class NewsModel extends BaseModel{
         ";
         // echo($sql);
         if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
-            $result->close();
 
             return mysqli_insert_id(static::$db);
         }else {
@@ -98,7 +97,6 @@ class NewsModel extends BaseModel{
         // echo $sql;
 
         if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
-            $result->close();
 
             return 1;
         }else {
@@ -111,7 +109,6 @@ class NewsModel extends BaseModel{
     function deleteNewsByID($id){
         $sql = "DELETE FROM tb_news WHERE news_id = '$id' ";
         if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
-            $result->close();
             
             return 1;
         }else {

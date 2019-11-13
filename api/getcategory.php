@@ -17,12 +17,17 @@ if($action == "category"){
 	$category = $category_model->getCategoryBy();
 	echo json_encode($category, JSON_UNESCAPED_UNICODE);
 }
-
-if($action == "readnews"){
+if($action == "getfoundcategory"){
 	$category_id = $obj['id'];
-	$category = $category_model->getCategoryByID($category_id);
-	echo json_encode($news, JSON_UNESCAPED_UNICODE);
+	$category = $category_model->getFoundCategoryByID($category_id);
+	echo json_encode($category, JSON_UNESCAPED_UNICODE);
 }
+if($action == "getlostcategory"){
+	$category_id = $obj['id'];
+	$category = $category_model->getLostCategoryByID($category_id);
+	echo json_encode($category, JSON_UNESCAPED_UNICODE);
+}
+
 else{
 	
 }

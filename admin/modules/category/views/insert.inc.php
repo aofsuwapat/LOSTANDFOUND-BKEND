@@ -21,15 +21,15 @@
    }
  }
 
- function readURL(input) {
+ function readURL(input, name) {
 		if (input.files && input.files[0]) {
 			var reader = new FileReader();
 			reader.onload = function(e) {
-				$('#img_back').attr('src', e.target.result);
+				$('#'+name).attr('src', e.target.result);
 			}
 			reader.readAsDataURL(input.files[0]);
 		}else{
-			$('#img_back').attr('src', '../img_upload/category/default.png');
+			$('#'+name).attr('src', '../img_upload/category/default.png');
 		}
 	}
 
@@ -37,9 +37,7 @@
 
 <h1>เพิ่มหมวดหมู่</h1>
 <div align="right">
-
 </div>
-
 <form role="form" method="post" onsubmit="return check();" action="index.php?content=category&action=add" enctype="multipart/form-data">
   
   <div class="row">
@@ -57,7 +55,31 @@
 				<label>รูปภาพหมวดหมู่<font color="#F00"></font></label>
 				<div>
 					<img id="img_back" src="../img_upload/category/default.png" class="img-responsive img-size"  style = "height: 300px; width: 500px;"> 
-					<input accept=".jpg , .png" type="file" id="category_img" name="category_img" class="form-control" style="margin: 14px 0 0 0 ; width: 300px;" onChange="readURL(this);">
+					<input accept=".jpg , .png" type="file" id="category_img" name="category_img" class="form-control" style="margin: 14px 0 0 0 ; width: 300px;" onChange="readURL(this,'img_back');">
+				</div>
+			</div>
+		</div>
+	</div>
+
+  <div class="row">
+		<div class="col-lg-6">
+			<div class="form-group">
+				<label>ไอคอนเจอของ<font color="#F00"></font></label>
+				<div>
+					<img id="img_found_pin" src="../img_upload/category/default.png" class="img-responsive img-size"  style = "height: 300px; width: 500px;"> 
+					<input accept=".jpg , .png" type="file" id="found_pin" name="found_pin" class="form-control" style="margin: 14px 0 0 0 ; width: 300px;" onChange="readURL(this,'img_found_pin');">
+				</div>
+			</div>
+		</div>
+	</div>
+
+  <div class="row">
+		<div class="col-lg-6">
+			<div class="form-group">
+				<label>ไอคอนของหาย<font color="#F00"></font></label>
+				<div>
+					<img id="img_lost_pin" src="../img_upload/category/default.png" class="img-responsive img-size"  style = "height: 300px; width: 500px;"> 
+					<input accept=".jpg , .png" type="file" id="lost_pin" name="lost_pin" class="form-control" style="margin: 14px 0 0 0 ; width: 300px;" onChange="readURL(this,'img_lost_pin');">
 				</div>
 			</div>
 		</div>

@@ -6,6 +6,7 @@ $postfound_model = new PostfoundModel;
 $json = file_get_contents('php://input');
 
 $obj = json_decode($json,true);
+
 $action = $obj['action'];
 if($action == "found"){
 	$found = $found_model->getFoundBy();

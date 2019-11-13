@@ -9,12 +9,8 @@ class FoundModel extends BaseModel{
             mysqli_set_charset(static::$db,"utf8");
         }
     }
-
-    function getFoundBy($signup_id){
-        $sql = "SELECT * , DATE_FORMAT(STR_TO_DATE(found_dateadd,'%Y-%m-%d %H:%i'), '%d %m %Y, %H:%i' ) AS found_date_format ,
-        (SELECT COUNT(comment_id) FROM tb_comment_found WHERE found_id = tb1.found_id) as count_comment,
-        (SELECT COUNT(like_id) FROM tb_like_found WHERE like_found_id = tb1.found_id) as count_like,
-        (SELECT COUNT(like_id) FROM tb_like_found WHERE like_found_id = tb1.found_id AND tb_like_found.signup_id = $signup_id) as is_like
+    function getFound(){
+        $sql = "SELECT * , DATE_FORMAT(STR_TO_DATE(found_dateadd,'%Y-%m-%d %H:%i'), '%d %m %Y, %H:%i' ) AS found_date_format 
         FROM tb_found as tb1 
         left join tb_category as tb2 on tb1.found_type=tb2.category_id 
         ORDER BY STR_TO_DATE(found_dateadd,'%Y-%m-%d %H:%i') DESC ";
@@ -27,6 +23,52 @@ class FoundModel extends BaseModel{
             return $data;
         }
     }
+    function getFoundBy($signup_id){
+
+        if($signup_id != 'Guest' ){
+            $str = ",
+            (SELECT COUNT(like_id) FROM tb_like_found WHERE like_found_id = tb1.found_id AND tb_like_found.signup_id = $signup_id) as is_like";
+        }
+        $sql = "SELECT * , DATE_FORMAT(STR_TO_DATE(found_dateadd,'%Y-%m-%d %H:%i'), '%d %m %Y, %H:%i' ) AS found_date_format ,
+        (SELECT COUNT(comment_id) FROM tb_comment_found WHERE found_id = tb1.found_id) as count_comment,
+        (SELECT COUNT(like_id) FROM tb_like_found WHERE like_found_id = tb1.found_id) as count_like $str
+        FROM tb_found as tb1 
+        left join tb_category as tb2 on tb1.found_type=tb2.category_id 
+        ORDER BY STR_TO_DATE(found_dateadd,'%Y-%m-%d %H:%i') DESC ";
+        if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            $data = [];
+            while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
+                $data[] = $row;
+            }
+            $result->close();
+            return $data;
+        }
+    }
+
+    function getFoundBySearch($signup_id, $keyword){
+
+        if($signup_id != 'Guest' ){
+            $str = ",
+            (SELECT COUNT(like_id) FROM tb_like_found WHERE like_found_id = tb1.found_id AND tb_like_found.signup_id = $signup_id) as is_like";
+        }
+        $sql = "SELECT * , DATE_FORMAT(STR_TO_DATE(found_dateadd,'%Y-%m-%d %H:%i'), '%d %m %Y, %H:%i' ) AS found_date_format ,
+        (SELECT COUNT(comment_id) FROM tb_comment_found WHERE found_id = tb1.found_id) as count_comment,
+        (SELECT COUNT(like_id) FROM tb_like_found WHERE like_found_id = tb1.found_id) as count_like $str
+        FROM tb_found as tb1 
+        left join tb_category as tb2 on tb1.found_type=tb2.category_id 
+        WHERE tb1.found_topic LIKE '%$keyword%' OR tb1.found_detail LIKE '%$keyword%'
+        ORDER BY STR_TO_DATE(found_dateadd,'%Y-%m-%d %H:%i') DESC ";
+        if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            $data = [];
+            while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
+                $data[] = $row;
+            }
+            $result->close();
+            return $data;
+        }
+    }
+
+
 
     function getFoundByUser($user_id){
         $sql = "SELECT * , DATE_FORMAT(STR_TO_DATE(found_dateadd,'%Y-%m-%d %H:%i'), '%d %m %Y, %H:%i' ) AS found_date_format ,
@@ -66,7 +108,10 @@ class FoundModel extends BaseModel{
         FROM tb_comment_found as tb1
         LEFT JOIN tb_signup as tb2 ON tb1.comment_user = tb2.signup_id
         WHERE found_id = '$id' 
-        ";
+        ORDER BY STR_TO_DATE(comment_date,'%Y-%m-%d %H:%i') DESC ";
+
+       
+        
 
         if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             $data = [];
@@ -205,6 +250,16 @@ class FoundModel extends BaseModel{
 
     function deleteFoundByID($id){
         $sql = "DELETE FROM tb_found WHERE found_id = '$id' ";
+        if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+
+            return 1;
+        }else {
+
+            return 0;
+        }
+    }
+    function deleteCommentFoundByID($id){
+        $sql = "DELETE FROM tb_comment_found WHERE comment_id = '$id' ";
         if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
 
             return 1;

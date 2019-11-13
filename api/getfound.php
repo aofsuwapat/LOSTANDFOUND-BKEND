@@ -13,7 +13,18 @@ if($action == "found"){
 	$found = $found_model->getFoundBy($id);
 	echo json_encode($found, JSON_UNESCAPED_UNICODE);
 
-}if($action == "founduser"){
+}
+if($action == "search"){
+	$id = $obj['signup_id'];
+	$keyword = $obj['keyword'];
+	$found = $found_model->getFoundBySearch($id, $keyword);
+	echo json_encode($found, JSON_UNESCAPED_UNICODE);
+
+}
+
+
+
+if($action == "founduser"){
 	$signup_id = $obj['id'];
 	$found = $found_model->getFoundByUser($signup_id);
 	echo json_encode($found, JSON_UNESCAPED_UNICODE);
@@ -40,6 +51,11 @@ if($action == "deletepostfound"){
 	$found_id = $obj['id'];
 	$found = $found_model->deleteFoundByID($found_id);
 	echo json_encode($found, JSON_UNESCAPED_UNICODE);
+}
+if($action == "deletecommentfound"){
+	$comment_id = $obj['id'];
+	$comment = $found_model->deleteCommentFoundByID($comment_id);
+	echo json_encode($comment, JSON_UNESCAPED_UNICODE);
 }
 if($action == "addcommentfound"){
 	$data = [];

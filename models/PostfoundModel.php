@@ -28,6 +28,24 @@ class PostfoundModel extends BaseModel{
         }
     }
 
+    function getFoundBy($signup_id){
+        $sql = "SELECT * , DATE_FORMAT(STR_TO_DATE(found_dateadd,'%Y-%m-%d %H:%i'), '%d %m %Y, %H:%i' ) AS found_date_format ,
+        (SELECT COUNT(comment_id) FROM tb_comment_found WHERE found_id = tb1.found_id) as count_comment,
+        (SELECT COUNT(like_id) FROM tb_like_found WHERE like_found_id = tb1.found_id) as count_like,
+        (SELECT COUNT(like_id) FROM tb_like_found WHERE like_found_id = tb1.found_id AND tb_like_found.signup_id = $signup_id) as is_like
+        FROM tb_found as tb1 
+        left join tb_category as tb2 on tb1.found_type=tb2.category_id 
+        ORDER BY STR_TO_DATE(found_dateadd,'%Y-%m-%d %H:%i') DESC ";
+        if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            $data = [];
+            while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
+                $data[] = $row;
+            }
+            $result->close();
+            return $data;
+        }
+    }
+
     function getUserBy(){
         $sql = "SELECT * 
         FROM tb_user 
@@ -59,33 +77,46 @@ class PostfoundModel extends BaseModel{
         }
     }
 
-    function updateUserByID($id,$data = []){
-        $data['user_userid'] = mysqli_real_escape_string(static::$db,$data['user_userid']);
-        $data['user_firstname'] = mysqli_real_escape_string(static::$db,$data['user_firstname']);
-        $data['user_lastname'] = mysqli_real_escape_string(static::$db,$data['user_lastname']);
-        $data['user_email'] = mysqli_real_escape_string(static::$db,$data['user_email']);
-        $data['user_password'] = mysqli_real_escape_string(static::$db,$data['user_password']);
-     
+    function updateFoundByID($id,$data = []){
+        $data['found_topic'] = mysqli_real_escape_string(static::$db,$data['signup_text1']);
+        $data['found_type'] = mysqli_real_escape_string(static::$db,$data['signup_text2']);
+        $data['found_detail'] = mysqli_real_escape_string(static::$db,$data['signup_text3']);
+        $data['found_img'] = mysqli_real_escape_string(static::$db,$data['img_name']);
+        $data['found_location'] = mysqli_real_escape_string(static::$db,$data['signup_text4']);
+        $data['found_latitude'] = mysqli_real_escape_string(static::$db,$data['signup_text5']);
+        $data['found_longitude'] = mysqli_real_escape_string(static::$db,$data['signup_text6']);
+       
 
-        $sql = "UPDATE tb_user SET 
-        user_userid = '".$data['user_userid']."', 
-        user_firstname = '".$data['user_firstname']."', 
-        user_lastname = '".$data['user_lastname']."', 
-        user_email = '".$data['user_email']."', 
-        user_password = '".$data['user_password']."'
+        $sql = "UPDATE tb_found SET 
+        found_topic = '".$data['found_topic']."', 
+        found_type = '".$data['found_type']."', 
+        found_detail = '".$data['found_detail']."', 
+        found_location = '".$data['found_location']."', 
+        found_latitude = '".$data['found_latitude']."', 
+        found_longitude = '".$data['found_longitude']."'
       
-
-        WHERE user_id = $id ";
+        WHERE found_id = $id ";
         
         // echo $sql;
         if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
-            
-            return 1;
-        }else {
+            if ($data['found_img'] != '') {
 
-            return 0;
-        }
-    }
+                $sql = "UPDATE tb_found SET 
+                found_img = '".$data['found_img']."'
+                WHERE found_id = $id ";
+                
+    
+                if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+                    return $result;
+                }else {
+                    return $result;
+                }
+            }
+            }else {
+                return $result;
+            }
+        }    
+
 
     function insertPostfound($data=[]){
         $sql = " INSERT INTO tb_found(
@@ -95,8 +126,8 @@ class PostfoundModel extends BaseModel{
         found_img,
         found_detail,
         found_location,
-        found_longitude,
         found_latitude,
+        found_longitude,
         found_dateadd        
     ) VALUES ('".
     mysqli_real_escape_string(static::$db,$data['signup_text1'])."','".

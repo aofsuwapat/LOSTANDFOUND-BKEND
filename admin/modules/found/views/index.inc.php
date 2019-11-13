@@ -25,7 +25,7 @@ if(isset($_GET['id'])){
 if(!isset($_GET['action'])){
 
     $about_header = $_GET['id'];
-    $found_detail = $found_model->getFoundBy();
+    $found_detail = $found_model->getFound();
     require_once($path.'view.inc.php');
 }else if ($_GET['action'] == 'update'){
     $category = $found_model->getCategory();

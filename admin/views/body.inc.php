@@ -17,6 +17,8 @@ if($content=="user"){
 	require_once("modules/category/views/index.inc.php"); 
 }else if($content=="found"){ 
 	require_once("modules/found/views/index.inc.php"); 
+}else if($content=="lost"){ 
+	require_once("modules/lost/views/index.inc.php"); 
 }else if($content=="certification"){ 
 	require_once("modules/certification/views/index.inc.php"); 
 }else if($content=="contact"){ 

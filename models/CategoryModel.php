@@ -56,6 +56,44 @@ class CategoryModel extends BaseModel{
             return $data;
         }
     }
+
+    function getFoundCategoryByID($id){
+        $sql = "SELECT * 
+        FROM tb_found as tb1
+        LEFT JOIN tb_category as tb2 ON tb2.category_id = tb1.found_type 
+        WHERE category_id = '$id' 
+        ";
+
+       
+
+        if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            $data = [];
+            while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
+                $data[] = $row;
+            }
+            $result->close();
+            return $data;
+        }
+    }
+
+    function getLostCategoryByID($id){
+        $sql = "SELECT * 
+        FROM tb_lost as tb1
+        LEFT JOIN tb_category as tb2 ON tb2.category_id = tb1.lost_type 
+        WHERE category_id = '$id' 
+        ";
+
+       
+
+        if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+            $data = [];
+            while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
+                $data[] = $row;
+            }
+            $result->close();
+            return $data;
+        }
+    }
     // function getCategoryBy(){
     //     $sql = "SELECT * 
     //     FROM tb_category_detail as tb1
@@ -129,10 +167,15 @@ class CategoryModel extends BaseModel{
     function updateCategoryTypeByID($id,$data = []){
         $data['category_name']=mysqli_real_escape_string(static::$db,$data['category_name']);
         $data['category_img']=mysqli_real_escape_string(static::$db,$data['category_img']);
+        $data['found_pin']=mysqli_real_escape_string(static::$db,$data['found_pin']);
+        $data['lost_pin']=mysqli_real_escape_string(static::$db,$data['lost_pin']);
+
 
         $sql = " UPDATE tb_category SET 
         category_name = '".$data['category_name']."',
-        category_img = '".$data['category_img']."'
+        category_img = '".$data['category_img']."',
+        found_pin = '".$data['found_pin']."',
+        lost_pin = '".$data['lost_pin']."'
         
         WHERE category_id = $id "; 
 
@@ -192,14 +235,18 @@ class CategoryModel extends BaseModel{
 public function insertCategoryType($data=[]){
     $sql = " INSERT INTO tb_category(
     category_name,
-    category_img
+    category_img,
+    found_pin,
+    lost_pin
     
 ) VALUES ('".
 mysqli_real_escape_string(static::$db,$data['category_name'])."','".
-mysqli_real_escape_string(static::$db,$data['category_img'])."')
+mysqli_real_escape_string(static::$db,$data['category_img'])."','".
+mysqli_real_escape_string(static::$db,$data['found_pin'])."','".
+mysqli_real_escape_string(static::$db,$data['lost_pin'])."')
 
 ";
-    echo($sql);
+    // echo($sql);
 if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
 
     return mysqli_insert_id(static::$db);
@@ -212,16 +259,35 @@ if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
 function updateCategoryByID($id,$data = []){
     $data['category_name']=mysqli_real_escape_string(static::$db,$data['category_name']);
     $data['category_img']=mysqli_real_escape_string(static::$db,$data['category_img']);
-
-    $sql = " UPDATE tb_category SET 
-    category_name = '".$data['category_name']."',
-    category_img = '".$data['category_img']."'
+    $data['found_pin']=mysqli_real_escape_string(static::$db,$data['found_pin']);
+    $data['lost_pin']=mysqli_real_escape_string(static::$db,$data['lost_pin']);
 
 
-    WHERE category_id = $id "; 
 
+    if($data['category_img']!=''){    
+        $sql = " UPDATE tb_category SET 
+        category_img = '".$data['category_img']."'
+        WHERE category_id = $id "; 
+        mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT);
+    }
+ 
+    if($data['found_pin']!=''){    
+        $sql = " UPDATE tb_category SET 
+        found_pin = '".$data['found_pin']."'
+        WHERE category_id = $id "; 
+        mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT);
+    }
+    if($data['lost_pin']!=''){
+        $sql = " UPDATE tb_category SET 
+        lost_pin = '".$data['lost_pin']."'
+        WHERE category_id = $id "; 
+        mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT);
+    }
         // echo $sql;
 
+    $sql = " UPDATE tb_category SET 
+    category_name = '".$data['category_name']."'
+    WHERE category_id = $id ";    
     if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
 
         return 1;

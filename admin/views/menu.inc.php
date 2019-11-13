@@ -41,6 +41,14 @@
         </a></li>
 
 
+        <li><a href="index.php?content=lost">
+            <div <?php if($content=="lost"){echo "class='menu-active'";} else {echo "class='menu'";}?> >
+                <!-- <i class="fa fa-smile" style="font-size:24px"></i> -->
+                <span style="padding:15px; font-size:15px;">ของหาย</span>
+            </div>
+        </a></li>
+
+
         <li><a href="index.php?content=user">
             <div <?php if($content=="user"){echo "class='menu-active'";} else {echo "class='menu'";}?> >
                 <!-- <i class="fa fa-user" style="font-size:24px"></i> -->
