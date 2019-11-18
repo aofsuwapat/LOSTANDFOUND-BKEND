@@ -258,6 +258,20 @@ class FoundModel extends BaseModel{
             return 0;
         }
     }
+
+    function checkFoundByID($id){
+        $sql = "UPDATE tb_found SET 
+        found_check = 1
+        WHERE found_id = $id"; 
+        if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+
+            return 1;
+        }else {
+
+            return 0;
+        }
+    }
+
     function deleteCommentFoundByID($id){
         $sql = "DELETE FROM tb_comment_found WHERE comment_id = '$id' ";
         if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {

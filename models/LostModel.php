@@ -58,7 +58,6 @@ class LostModel extends BaseModel{
         left join tb_category as tb2 on tb1.lost_type=tb2.category_id 
         WHERE tb1.lost_topic LIKE '%$keyword%' OR tb1.lost_detail LIKE '%$keyword%'
         ORDER BY STR_TO_DATE(lost_dateadd,'%Y-%m-%d %H:%i') DESC ";
-
         if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             $data = [];
             while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
@@ -259,6 +258,20 @@ class LostModel extends BaseModel{
             return 0;
         }
     }
+
+    function checkLostByID($id){
+        $sql = "UPDATE tb_lost SET 
+        lost_check = 1
+        WHERE lost_id = $id"; 
+        if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
+
+            return 1;
+        }else {
+
+            return 0;
+        }
+    }
+
     function deleteCommentLostByID($id){
         $sql = "DELETE FROM tb_comment_lost WHERE comment_id = '$id' ";
         if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {

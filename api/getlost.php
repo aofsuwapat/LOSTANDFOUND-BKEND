@@ -52,6 +52,14 @@ if($action == "deletepostlost"){
 	$lost = $lost_model->deleteLostByID($lost_id);
 	echo json_encode($lost, JSON_UNESCAPED_UNICODE);
 }
+
+if($action == "checkpostlost"){
+	$lost_id = $obj['id'];
+	$lost = $lost_model->checkLostByID($lost_id);
+	echo json_encode($lost, JSON_UNESCAPED_UNICODE);
+}
+
+
 if($action == "deletecommentlost"){
 	$comment_id = $obj['id'];
 	$comment = $lost_model->deleteCommentLostByID($comment_id);

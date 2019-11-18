@@ -52,6 +52,14 @@ if($action == "deletepostfound"){
 	$found = $found_model->deleteFoundByID($found_id);
 	echo json_encode($found, JSON_UNESCAPED_UNICODE);
 }
+
+if($action == "checkpostfound"){
+	$found_id = $obj['id'];
+	$found = $found_model->checkFoundByID($found_id);
+	echo json_encode($found, JSON_UNESCAPED_UNICODE);
+}
+
+
 if($action == "deletecommentfound"){
 	$comment_id = $obj['id'];
 	$comment = $found_model->deleteCommentFoundByID($comment_id);
